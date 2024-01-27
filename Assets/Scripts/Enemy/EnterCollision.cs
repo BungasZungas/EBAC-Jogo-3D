@@ -10,7 +10,9 @@ public class EnterCollision : MonoBehaviour
     [SerializeField] private GameObject trigger;
     [SerializeField] private string tagToCheck = "Player";
 
-    private float timeToScale = .1f;
+    public bool startWithAnimation = true;
+
+    [SerializeField] private float timeToScale = .2f;
     private Ease scaleEase = Ease.OutBounce;
 
     private void Awake()
@@ -25,7 +27,11 @@ public class EnterCollision : MonoBehaviour
             Enemy.SetActive(true);
             trigger.SetActive(false);
 
-            Debug.Log("Trigger");
+            if (startWithAnimation == true)
+            {
+                Enemy.transform.localScale = Vector3.zero;
+                Enemy.transform.DOScale(Vector3.one, timeToScale).SetEase(scaleEase);
+            }
         }
     }
 }

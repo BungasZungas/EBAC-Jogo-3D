@@ -417,7 +417,7 @@ MonoBehaviour:
   _animationBase: {fileID: 73190512}
   startAnimationDuration: 0.2
   startAnimationEase: 27
-  startWithBornAnimation: 1
+  startWithBornAnimation: 0
   wayPoints:
   - {fileID: 789254108}
   minDistance: 1
@@ -2805,6 +2805,8 @@ MonoBehaviour:
   Enemy: {fileID: 661353798}
   trigger: {fileID: 581510618}
   tagToCheck: Player
+  startWithAnimation: 1
+  timeToScale: 0.2
 --- !u!23 &581510622
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3145,7 +3147,7 @@ MonoBehaviour:
   _animationBase: {fileID: 661353802}
   startAnimationDuration: 0.2
   startAnimationEase: 27
-  startWithBornAnimation: 1
+  startWithBornAnimation: 0
   gunBase: {fileID: 1321010354}
 --- !u!114 &661353802 stripped
 MonoBehaviour:
@@ -3807,6 +3809,8 @@ MonoBehaviour:
   Enemy: {fileID: 73190509}
   trigger: {fileID: 758249966}
   tagToCheck: Player
+  startWithAnimation: 1
+  timeToScale: 0.2
 --- !u!23 &758249970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4004,7 +4008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4634508639506911257, guid: 487cd9b47572358489f9b1b8c79da6c3, type: 3}
       propertyPath: startWithBornAnimation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4634508639506911257, guid: 487cd9b47572358489f9b1b8c79da6c3, type: 3}
       propertyPath: wayPoints.Array.data[0]
@@ -7212,6 +7216,8 @@ MonoBehaviour:
   Enemy: {fileID: 199741838}
   trigger: {fileID: 1244616151}
   tagToCheck: Player
+  startWithAnimation: 1
+  timeToScale: 0.2
 --- !u!23 &1244616155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8806,7 +8812,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500100153}
-  m_LocalRotation: {x: 0.24446768, y: 0.000000018653607, z: -0.0000000047029025, w: 0.9696575}
+  m_LocalRotation: {x: 0.24446768, y: -0.000000018653607, z: 0.0000000047029025, w: 0.9696575}
   m_LocalPosition: {x: 399.18, y: 3.1464128, z: 40.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -10921,7 +10927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4634508639506911257, guid: 487cd9b47572358489f9b1b8c79da6c3, type: 3}
       propertyPath: startWithBornAnimation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4634508639506911257, guid: 487cd9b47572358489f9b1b8c79da6c3, type: 3}
       propertyPath: wayPoints.Array.data[0]
@@ -12385,6 +12391,8 @@ MonoBehaviour:
   Enemy: {fileID: 399950345}
   trigger: {fileID: 2073809585}
   tagToCheck: Player
+  startWithAnimation: 1
+  timeToScale: 0.2
 --- !u!23 &2073809589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12765,7 +12773,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105074978}
-  m_LocalRotation: {x: 0.24446768, y: 0.000000018653607, z: -0.0000000047029025, w: 0.9696575}
+  m_LocalRotation: {x: 0.24446768, y: -0.000000018653607, z: 0.0000000047029025, w: 0.9696575}
   m_LocalPosition: {x: 399.18, y: 3.1464128, z: 40.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
