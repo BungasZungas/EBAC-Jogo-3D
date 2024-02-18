@@ -9472,7 +9472,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500100153}
-  m_LocalRotation: {x: 0.24446768, y: 0.000000018653607, z: -0.0000000047029025, w: 0.9696575}
+  m_LocalRotation: {x: 0.24446768, y: -0.000000018653607, z: 0.0000000047029025, w: 0.9696575}
   m_LocalPosition: {x: 399.18, y: 3.1464128, z: 40.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11676,8 +11676,8 @@ GameObject:
   - component: {fileID: 1851977018}
   - component: {fileID: 1851977017}
   m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
+  m_Name: Reload UI
+  m_TagString: Reload Tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13253,7 +13253,7 @@ GameObject:
   - component: {fileID: 2094094019}
   - component: {fileID: 2094094018}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Life UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13526,7 +13526,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105074978}
-  m_LocalRotation: {x: 0.24446768, y: 0.000000018653607, z: -0.0000000047029025, w: 0.9696575}
+  m_LocalRotation: {x: 0.24446768, y: -0.000000018653607, z: 0.0000000047029025, w: 0.9696575}
   m_LocalPosition: {x: 399.18, y: 3.1464128, z: 40.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
