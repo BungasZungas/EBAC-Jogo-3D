@@ -17,17 +17,19 @@ namespace Enemy
         public override void Update()
         {
             base.Update();
-            if(Vector3.Distance(transform.position, wayPoints[_index].transform.position) < minDistance)
+            if (Vector3.Distance(transform.position, wayPoints[_index].transform.position) < minDistance)
             {
                 _index++;
-                if(_index >= wayPoints.Length)
+                if (_index >= wayPoints.Length)
                 {
                     _index = 0;
                 }
             }
-
-            transform.position = Vector3.MoveTowards(transform.position, wayPoints[_index].transform.position, Time.deltaTime * speed);
-            transform.LookAt(wayPoints[_index].transform.position);
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, wayPoints[_index].transform.position, Time.deltaTime * speed);
+                transform.LookAt(wayPoints[_index].transform.position);
+            }
         }
     }
 }

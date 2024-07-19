@@ -41,6 +41,7 @@ public class HealthBase : MonoBehaviour, IDamageable
     public void Damage()
     {
         Damage(5);
+        ShakeCamera.Instance.Shake();
     }
 
     public void Damage(float f)
