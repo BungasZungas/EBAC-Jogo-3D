@@ -10448,8 +10448,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500100153}
-  m_LocalRotation: {x: 0.0287041, y: 0.9691787, z: -0.13741286, w: 0.20245121}
-  m_LocalPosition: {x: -2.4899902, y: -5.2, z: 18.7}
+  m_LocalRotation: {x: 0.27314758, y: -0.000000016552061, z: 0.0000000046998823, w: 0.9619722}
+  m_LocalPosition: {x: 0, y: 1.0299997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 579580703}
@@ -11379,7 +11379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9426e9367957cc439cc3901b25bb1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 0}
+  virtualCamera: {fileID: 1664698480}
   shakeTime: 0
   amplitude: 3
   frequency: 3
@@ -12899,6 +12899,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4634508639506911257, guid: 487cd9b47572358489f9b1b8c79da6c3, type: 3}
+      propertyPath: lookAtPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634508639506911257, guid: 487cd9b47572358489f9b1b8c79da6c3, type: 3}
       propertyPath: wayPoints.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -12916,7 +12920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7474499814080416832, guid: 487cd9b47572358489f9b1b8c79da6c3, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7474499814080416834, guid: 487cd9b47572358489f9b1b8c79da6c3, type: 3}
       propertyPath: m_RootOrder
