@@ -32,6 +32,10 @@ public class GunShootLimit : GunBase
                 UpdateUI();
                 yield return new WaitForSeconds(timeBetweenShoot);
             }
+            else
+            {
+                yield break; // Exit the coroutine if max shoots is reached
+            }
         }
     }
 
