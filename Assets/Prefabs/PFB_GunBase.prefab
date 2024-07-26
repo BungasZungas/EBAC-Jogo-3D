@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2779818450283555644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -113,7 +113,6 @@ MonoBehaviour:
   positionToShoot: {fileID: 2779818451019272860}
   timeBetweenShoot: 0.3
   speed: 50
-  keycode: 122
 --- !u!1 &2779818451019272861
 GameObject:
   m_ObjectHideFlags: 0

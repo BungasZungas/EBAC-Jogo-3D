@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5933856747758975985}
   - component: {fileID: 5933856747758975986}
   m_Layer: 0
-  m_Name: Gun_Angle
+  m_Name: PFB_GunAngle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5933856747758975988}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
   positionToShoot: {fileID: 5933856747420942932}
   timeBetweenShoot: 0.3
   speed: 50
-  keycode: 122
+  uiGunUpdaters: []
   maxShoot: 5
   timeToRecharge: 1
   amountPerShoot: 4
