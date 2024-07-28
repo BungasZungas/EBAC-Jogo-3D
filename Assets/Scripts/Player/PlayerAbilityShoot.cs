@@ -13,6 +13,7 @@ public class PlayerAbilityShoot : PlayerAbilityBase
     public GunBase gun02;
 
     private GunBase _currentGun;
+    [SerializeField] private FlashColor _flashColor;
 
     protected override void Init()
     {
@@ -50,6 +51,7 @@ public class PlayerAbilityShoot : PlayerAbilityBase
     private void StartShoot()
     {
         _currentGun.StartShoot();
+        _flashColor?.Flash();
         Debug.Log("Start Shoot");
     }
 
