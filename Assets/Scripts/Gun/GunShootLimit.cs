@@ -6,7 +6,6 @@ using UnityEngine;
 public class GunShootLimit : GunBase
 {
     public List<UIFillUpdater> uiGunUpdaters;
-
     public float maxShoot = 5f;
     public float timeToRecharge = 1f;
 
@@ -22,29 +21,34 @@ public class GunShootLimit : GunBase
     {
         if (_recharging) yield break;
 
-        while(true)
+        while (true)
         {
-            if(_currentShoots < maxShoot)
+            if (_currentShoots < maxShoot && Time.time >= lastShootTime + timeBetweenShoot)
             {
                 Shoot();
                 _currentShoots++;
+                lastShootTime = Time.time;
                 CheckRecharge();
                 UpdateUI();
                 yield return new WaitForSeconds(timeBetweenShoot);
             }
+            else if (_currentShoots >= maxShoot)
+            {
+                yield break;
+            }
             else
             {
-                yield break; // Exit the coroutine if max shoots is reached
+                yield return null; 
             }
         }
     }
 
     private void CheckRecharge()
     {
-        if (_currentShoots >= maxShoot)
+        if (_currentShoots >= maxShoot && !_recharging)
         {
             StopShoot();
-            StartCoroutine(RechargeCoroutine());
+            StartRecharge();
         }
     }
 
@@ -54,15 +58,16 @@ public class GunShootLimit : GunBase
         StartCoroutine(RechargeCoroutine());
     }
 
-    IEnumerator RechargeCoroutine()
+    private IEnumerator RechargeCoroutine()
     {
         float time = 0;
-        while(time < timeToRecharge)
+        while (time < timeToRecharge)
         {
             time += Time.deltaTime;
-            uiGunUpdaters.ForEach(i => i.UpdateValue(time/timeToRecharge));
+            uiGunUpdaters.ForEach(i => i.UpdateValue(time / timeToRecharge));
             yield return new WaitForEndOfFrame();
         }
+
         _currentShoots = 0;
         _recharging = false;
     }
@@ -74,7 +79,6 @@ public class GunShootLimit : GunBase
 
     private void GetAllUIs()
     {
-        //uiGunUpdaters = GameObject.FindObjectsOfType<UIFillUpdater>().ToList();
         uiGunUpdaters.Clear();
         UIFillUpdater gunUI = GameObject.Find("Reload UI").GetComponent<UIFillUpdater>();
         uiGunUpdaters.Add(gunUI);

@@ -1,27 +1,29 @@
-using System.Linq;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GunBase : MonoBehaviour
 {
     public ProjectileBase prefabProjectile;
-
     public Transform positionToShoot;
-    public float timeBetweenShoot = .3f;
+    public float timeBetweenShoot = 0.3f;
     public float speed = 50f;
 
-    private Coroutine _currentCoroutine;
+    protected Coroutine _currentCoroutine;
+    protected bool isShooting = false;
+    protected float lastShootTime = 0f;
 
     protected virtual IEnumerator ShootCoroutine()
     {
         while (true)
         {
-            Shoot();
-            yield return new WaitForSeconds(timeBetweenShoot);
+            if (Time.time >= lastShootTime + timeBetweenShoot)
+            {
+                Shoot();
+                lastShootTime = Time.time;
+            }
+            yield return null;
         }
     }
-
 
     public virtual void Shoot()
     {
@@ -35,13 +37,20 @@ public class GunBase : MonoBehaviour
 
     public void StartShoot()
     {
-        StopShoot();
-        _currentCoroutine = StartCoroutine(ShootCoroutine());
+        if (!isShooting)
+        {
+            isShooting = true;
+            _currentCoroutine = StartCoroutine(ShootCoroutine());
+        }
     }
 
     public void StopShoot()
     {
-        if (_currentCoroutine != null)
-            StopCoroutine(_currentCoroutine);
+        if (isShooting)
+        {
+            isShooting = false;
+            if (_currentCoroutine != null)
+                StopCoroutine(_currentCoroutine);
+        }
     }
 }

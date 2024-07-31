@@ -5216,7 +5216,7 @@ MonoBehaviour:
   m_Instructions:
   - m_FullHash: 1432961145
     m_VirtualCamera: {fileID: 1596303412}
-    m_ActivateAfter: 1
+    m_ActivateAfter: 30
     m_MinDuration: 0
   - m_FullHash: -827840423
     m_VirtualCamera: {fileID: 1664698480}
@@ -5242,6 +5242,12 @@ MonoBehaviour:
   - m_Hash: -827840423
     m_ParentHash: 756556552
   - m_Hash: 2142902792
+    m_ParentHash: 756556552
+  - m_Hash: -1454647999
+    m_ParentHash: 756556552
+  - m_Hash: 197813724
+    m_ParentHash: 756556552
+  - m_Hash: 1353449261
     m_ParentHash: 756556552
 --- !u!4 &43590384
 Transform:

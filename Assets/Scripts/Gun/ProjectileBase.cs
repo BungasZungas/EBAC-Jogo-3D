@@ -23,9 +23,11 @@ public class ProjectileBase : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        foreach(var t in tagsToHit)
+        bool shouldDestroy = false;
+
+        foreach (var t in tagsToHit)
         {
-            if(collision.transform.tag == t)
+            if(collision.transform.CompareTag(t))
             {
                 var damageable = collision.transform.GetComponent<IDamageable>();
 
@@ -36,12 +38,16 @@ public class ProjectileBase : MonoBehaviour
                     dir.y = 0;
 
                     damageable.Damage(damageAmount, dir);
-            
                 }
+
+                shouldDestroy = true;
                 break;
             }
         }
 
-        Destroy(gameObject);
+        if (shouldDestroy)
+        {
+            Destroy(gameObject);
+        }
     }
 }
