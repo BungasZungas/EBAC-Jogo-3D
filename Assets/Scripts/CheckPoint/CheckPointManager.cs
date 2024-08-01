@@ -9,6 +9,11 @@ public class CheckPointManager : Singleton<CheckPointManager>
 
     public List<CheckPointBase> checkpoints;
 
+    private void Start()
+    {
+        SaveManager.Instance.InitializePlayerCheckPoint();
+    }
+
     public bool HasCheckPoint()
     {
         return lastCheckPointKey > 0;

@@ -7,7 +7,6 @@ namespace Cloth
 {
     public class ClothChanger : MonoBehaviour
     {
-
         public SkinnedMeshRenderer mesh;
 
         public Texture2D texture;

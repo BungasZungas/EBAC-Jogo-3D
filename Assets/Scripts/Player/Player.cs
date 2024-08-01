@@ -31,7 +31,7 @@ public class Player : Singleton<Player>//, IDamageable
     public UIFillUpdater uiGunUpdater;
 
     [Space]
-    [SerializeField] private ClothChanger _clothChanger;
+    [SerializeField] public ClothChanger _clothChanger;
 
     private bool _alive = true;
     private bool _jumping = false;

@@ -5,6 +5,7 @@ using ZUNGAS.Core.Singleton;
 
 namespace Cloth
 {
+
     public enum ClothType
     {
         TEXTURE,
@@ -20,6 +21,11 @@ namespace Cloth
         {
             return clothSetups.Find(i => i.clothType == clothType);
         }
+
+        private void Start()
+        {
+            SaveManager.Instance.InitializePlayerCloth();
+        }
     }
 
     [System.Serializable]
@@ -27,6 +33,5 @@ namespace Cloth
     {
         public ClothType clothType;
         public Texture2D texture;
-        
     }
 }
