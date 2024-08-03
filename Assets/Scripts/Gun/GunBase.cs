@@ -8,6 +8,8 @@ public class GunBase : MonoBehaviour
     public float timeBetweenShoot = 0.3f;
     public float speed = 50f;
 
+    public SFXType sfxType;
+
     protected Coroutine _currentCoroutine;
     protected bool isShooting = false;
     protected float lastShootTime = 0f;
@@ -25,8 +27,14 @@ public class GunBase : MonoBehaviour
         }
     }
 
+    private void PlaySFX()
+    {
+        SFXPool.Instance.Play(sfxType);
+    }
+
     public virtual void Shoot()
     {
+        PlaySFX();
         var projectile = Instantiate(prefabProjectile);
         projectile.transform.position = positionToShoot.position;
         projectile.transform.rotation = positionToShoot.rotation;

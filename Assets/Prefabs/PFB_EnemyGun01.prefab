@@ -113,6 +113,7 @@ MonoBehaviour:
   positionToShoot: {fileID: 2779818451019272860}
   timeBetweenShoot: 2
   speed: 50
+  sfxType: 3
 --- !u!1 &2779818451019272861
 GameObject:
   m_ObjectHideFlags: 0
